@@ -21,7 +21,7 @@ let cart = JSON.parse(localStorage.getItem('plantlab_cart')) || [];
 if (!localStorage.getItem('plantlab_products')) {
     localStorage.setItem('plantlab_products', JSON.stringify(defaultProducts));
 }
-// sua lai duong dan anh cho dung vi tri cua trang hien tai
+// sua lai duong dan anh cho dung vi tri 
 function suaAnh(imgPath) {
     if (!imgPath) return '';
     if (window.location.pathname.includes('/html/')) {
@@ -37,7 +37,6 @@ function laySpTheoId(id) {
 function addToCart(maSP, soLuongThem = 1) {
     let sp = laySpTheoId(maSP);
     if (!sp) return;
-    // kiem tra san pham nay da co trong gio chua
     let spDaCo = cart.find(item => item.id == maSP);
     if (spDaCo) {
         spDaCo.quantity += soLuongThem;
@@ -91,13 +90,12 @@ function hienThiGioHang() {
     let headerCount = document.getElementById('cartCountHeader');
     let subtotalEl = document.getElementById('cartSubtotal');
     if (!container) return;
-    // tinh tong so luong
+
     let tongSL = 0;
     cart.forEach(item => {
         tongSL += item.quantity;
     });
     if (headerCount) headerCount.textContent = tongSL;
-    // neu gio trong thi bao nguoi dung
     if (cart.length === 0) {
         container.innerHTML = `
             <div class="empty-cart">
@@ -226,7 +224,6 @@ function scrollAnimation() {
 
         cards.forEach(card => observer.observe(card));
     } else {
-        // neu trinh duyet cu khong ho tro thi hien tat ca luon
         cards.forEach(card => card.classList.add("show"));
     }
 }
@@ -238,13 +235,12 @@ function khoiTaoSidebar() {
     let overlay = document.getElementById('cartOverlayBg');
     let container = document.getElementById('cartItemsContainer');
     if (!cartBtn || !sidebar) return;
-    // click icon gio hang de mo sidebar
     cartBtn.addEventListener('click', (e) => {
         e.preventDefault();
         sidebar.classList.add('open');
         overlay.classList.add('open');
     });
-    // ham dong sidebar dung chung cho nhieu nut
+    // ham dong sidebar
     const dongSidebar = () => {
         sidebar.classList.remove('open');
         overlay.classList.remove('open');
@@ -282,7 +278,7 @@ function khoiTaoSidebar() {
         });
     }
 }
-// xu ly gui form lien he
+// form lien he
 function xuLyFormLienHe() {
     let form = document.getElementById('contactForm');
     if (!form) return;
@@ -299,7 +295,7 @@ function xuLyFormLienHe() {
         form.reset();
     });
 }
-// hien hop thong bao nho o goc man hinh
+// hien hop thong bao 
 function hienToast(message, type = "success") {
     let container = document.getElementById('toastContainer');
     if (!container) return;
@@ -324,7 +320,6 @@ function hienChiTietSP() {
     let productId = params.get("product") || "1";
     let product = laySpTheoId(productId);
     if (!product) return;
-    // cap nhat cac phan tu HTML tren trang
     let elements = {
         title: document.getElementById("detail-title"),
         price: document.getElementById("detail-price"),
@@ -352,7 +347,6 @@ function hienChiTietSP() {
         btnMinus.addEventListener('click', () => {
             qtyInput.value = Math.max(1, parseInt(qtyInput.value || 1) - 1);
         });
-        // kiem tra lai gia tri khi click ra ngoai o so luong
         qtyInput.addEventListener('blur', () => {
             qtyInput.value = Math.max(1, parseInt(qtyInput.value || 1));
         });
@@ -367,7 +361,7 @@ function hienChiTietSP() {
         });
     }
 }
-// xu ly nut them vao gio nhanh tren danh sach san pham
+// xu ly nut them vao gio nhanh 
 function themNhanhVaoGio() {
     document.addEventListener('click', (e) => {
         let btn = e.target.closest('.add-to-cart-btn');
@@ -464,7 +458,7 @@ function resetAdminForm() {
     document.getElementById('formTitle').textContent = "Thêm Sản Phẩm Mới";
     document.getElementById('btnCancelEdit').style.display = "none";
 }
-// luu san pham moi hoac cap nhat san pham dang sua
+// luu moi hoac cap nhat
 function saveProduct() {
     let id = document.getElementById('editProductId').value;
     let title = document.getElementById('prodTitle').value.trim();
@@ -531,7 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hienChiTietSP();
     xuLyFormLienHe();
     themNhanhVaoGio();
-    // neu la trang admin thi ve bang san pham
+    
     if (document.getElementById('adminProductTableBody')) {
         renderAdminTable();
     }

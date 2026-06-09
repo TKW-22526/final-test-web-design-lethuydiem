@@ -24,13 +24,12 @@ img {
 section {
     padding: 100px 8%;
 }
-
-/* GLOBAL ELEMENTS */
+/* element */
 a {
     text-decoration: none;
     color: inherit;
 }
-/* HEADER */
+/* header */
 .header {
     width: 100%;
     height: 90px;
@@ -116,7 +115,7 @@ a {
     justify-content: center;
     align-items: center;
 }
-/* HERO SECTION */
+
 .hero {
     min-height: calc(100vh - 90px);
     display: flex;
@@ -174,7 +173,7 @@ a {
     border-radius: 30px;
     box-shadow: 0 15px 40px var(--shadow-color);
 }
-/* SECTION HEADERS */
+/*  headers */
 .section-header {
     text-align: center;
     margin-bottom: 60px;
@@ -190,7 +189,7 @@ a {
     margin-top: 15px;
     font-family: 'Poppins', sans-serif;
 }
-/* COLLECTION SECTION */
+/* Colection */
 .collection {
     background: white;
 }
@@ -331,7 +330,7 @@ a {
     background: var(--primary-color);
     color: white;
 }
-/* WHY SECTION */
+/* Why */
 .why {
     background: white;
 }
@@ -381,7 +380,7 @@ a {
     line-height: 1.8;
     color: #666;
 }
-/* REVIEW SECTION */
+/* Review */
 .review {
     background: var(--background-color);
 }
@@ -424,7 +423,7 @@ a {
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
 }
-/* FOOTER */
+
 .footer {
     background: #1f1f1f;
     color: white;
@@ -507,7 +506,7 @@ a {
     color: #aaa;
     font-size: 14px;
 }
-/* HERO OVERLAYS */
+/* OVERLAYS */
 .about-hero,
 .product-hero,
 .contact-hero {
@@ -558,7 +557,7 @@ a {
 .product-overlay h1, .contact-overlay h1 {
     font-size: 60px;
 }
-/* STORY SECTION */
+/* STORY */
 .story {
     display: flex;
     align-items: center;
@@ -589,7 +588,7 @@ a {
     color: #666;
     margin-bottom: 20px;
 }
-/* MISSION SECTION */
+/* MISSION */
 .mission {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -623,7 +622,7 @@ a {
     line-height: 1.8;
     color: #666;
 }
-/* STATS SECTION */
+/* STATS */
 .stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -653,7 +652,7 @@ a {
     font-size: 18px;
     color: #666;
 }
-/* SEARCH SECTION */
+/* SEARCH */
 .product-search-section {
     background: white;
     padding-top: 80px;
@@ -693,7 +692,7 @@ a {
     font-family: inherit;
     font-size: 0.9rem;
 }
-/* CONTACT SECTION */
+/* CONTACT */
 .contact-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -738,7 +737,7 @@ a {
     margin-bottom: 8px;
     font-family: 'Poppins', sans-serif;
 }
-/* FAQ SECTION */
+/* FAQ */
 .faq-section {
     margin-top: 40px;
     padding: 25px;
@@ -838,7 +837,7 @@ a {
 .contact-form button:hover {
     opacity: 0.9;
 }
-/* MAP SECTION */
+/* MAP */
 .map-section {
     padding-top: 0;
     background: white;
@@ -853,7 +852,7 @@ a {
     height: 450px;
     border: none;
 }
-/* DETAIL PRODUCT PAGE */
+/* trang chi tiet sp */
 .detail-section {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
@@ -1004,7 +1003,7 @@ a {
 .related-products {
     background: var(--background-color);
 }
-/* CART SIDEBAR */
+/* gio hang */
 .cart-sidebar {
     position: fixed;
     top: 0;
@@ -1168,7 +1167,7 @@ a {
     opacity: 1;
     pointer-events: auto;
 }
-/* TOAST NOTIFICATIONS */
+/* TOAST */
 .toast-container {
     position: fixed;
     top: 100px;
@@ -1215,7 +1214,7 @@ a {
         opacity: 0;
     }
 }
-/* ADMIN PANEL */
+/* ADMIN */
 .admin-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1422,7 +1421,7 @@ a {
 .no-products-message p {
     font-size: 1.1rem;
 }
-/* MEDIA QUERIES */
+/* MEDIA */
 @media(max-width: 992px) {
     .hero {
         flex-direction: column;
@@ -1553,7 +1552,7 @@ a {
         margin-right: 5px;
     }
 }
-/* SCROLL ANIMATION */
+/* SCROLL */
 .collection-card,
 .product-card,
 .why-card,
@@ -1562,7 +1561,401 @@ a {
 .stats-card {
     will-change: transform, opacity;
 }
-/* Tên sản phẩm trong bảng admin */
 .admin-table .admin-title {
     font-size: 0.85rem;
+}
+@media (max-width: 992px) {
+    .about-hero {
+        height: 45vh;
+    }
+    .about-overlay h1 {
+        font-size: 46px;
+    }
+    .story {
+        flex-direction: column;
+        gap: 40px;
+        padding: 70px 6%;
+    }
+    .story-image img {
+        height: 400px;
+    }
+    .story-content h2 {
+        font-size: 38px;
+    }
+    .mission-card {
+        padding: 35px 30px;
+    }
+    .mission-card h3 {
+        font-size: 26px;
+    }
+    .stats-card h2 {
+        font-size: 46px;
+    }
+    .contact-hero {
+        height: 45vh;
+    }
+    .contact-overlay h1 {
+        font-size: 46px;
+    }
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 70px 6%;
+    }
+    .contact-info h2 {
+        font-size: 38px;
+    }
+    .contact-form {
+        padding: 40px 35px;
+    }
+    .contact-map {
+        height: 380px;
+    }
+}
+@media (max-width: 768px) {
+    .about-hero {
+        height: 40vh;
+    }
+    .about-overlay h1 {
+        font-size: 32px;
+        padding: 0 15px;
+    }
+    .about-overlay span {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    .story {
+        flex-direction: column;
+        gap: 30px;
+        padding: 60px 5%;
+    }
+    .story-image img {
+        height: 280px;
+        border-radius: 20px;
+    }
+    .story-content span {
+        font-size: 12px;
+    }
+    .story-content h2 {
+        font-size: 28px;
+        margin: 15px 0;
+    }
+    .story-content p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+    .mission {
+        grid-template-columns: 1fr;
+        padding: 60px 5%;
+        gap: 20px;
+    }
+    .mission-card {
+        padding: 35px 25px;
+    }
+    .mission-card i {
+        font-size: 40px;
+    }
+    .mission-card h3 {
+        font-size: 24px;
+    }
+    .stats {
+        grid-template-columns: 1fr;
+        padding: 60px 5%;
+        gap: 20px;
+    }
+    .stats-card {
+        padding: 40px 20px;
+    }
+    .stats-card h2 {
+        font-size: 48px;
+    }
+    .stats-card p {
+        font-size: 16px;
+    }
+    .contact-hero {
+        height: 40vh;
+    }
+    .contact-overlay h1 {
+        font-size: 28px;
+        padding: 0 15px;
+    }
+    .contact-overlay span {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    .contact-section {
+        grid-template-columns: 1fr;
+        padding: 60px 5%;
+        gap: 35px;
+    }
+    .contact-info span {
+        font-size: 12px;
+    }
+    .contact-info h2 {
+        font-size: 28px;
+        margin: 15px 0;
+    }
+    .contact-info > p {
+        font-size: 15px;
+    }
+    .info-item {
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    .info-item i {
+        width: 45px;
+        height: 45px;
+        font-size: 17px;
+        flex-shrink: 0;
+    }
+    .info-item h4 {
+        font-size: 17px;
+    }
+    .info-item p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+    .faq-section {
+        padding: 20px;
+        margin-top: 25px;
+    }
+    .faq-section h3 {
+        font-size: 1rem;
+    }
+    .faq-section summary {
+        font-size: 14px;
+        padding-right: 25px;
+    }
+    .faq-section p {
+        font-size: 13px;
+    }
+    .contact-form {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+    .form-group input,
+    .form-group textarea {
+        padding: 15px 16px;
+        font-size: 14px;
+    }
+    .form-group textarea {
+        height: 150px;
+    }
+    .contact-form button {
+        padding: 15px;
+        font-size: 15px;
+    }
+    .map-section {
+        padding: 0 5% 60px 5%;
+    }
+    .map-box {
+        border-radius: 20px;
+    }
+    .contact-map {
+        height: 260px;
+    }
+}
+@media (max-width: 480px) {
+    .about-hero {
+        height: 35vh;
+    }
+    .about-overlay h1 {
+        font-size: 26px;
+    }
+    .story-image img {
+        height: 230px;
+    }
+    .story-content h2 {
+        font-size: 24px;
+    }
+    .mission-card {
+        padding: 30px 20px;
+    }
+    .mission-card h3 {
+        font-size: 22px;
+    }
+    .stats-card h2 {
+        font-size: 42px;
+    }
+    .contact-hero {
+        height: 35vh;
+    }
+    .contact-overlay h1 {
+        font-size: 22px;
+    }
+    .contact-info h2 {
+        font-size: 24px;
+    }
+    .info-item i {
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+    }
+    .info-item h4 {
+        font-size: 15px;
+    }
+    .contact-form {
+        padding: 25px 15px;
+    }
+    .contact-map {
+        height: 220px;
+    }
+    /* FAQ thu gọn hơn */
+    .faq-section {
+        padding: 15px;
+    }
+    .faq-section summary {
+        font-size: 13px;
+    }
+}
+@media (max-width: 992px) {
+    .admin-container {
+        padding: 30px 20px;
+    }
+    .admin-title {
+        font-size: 1.6rem;
+    }
+    .admin-form {
+        padding: 25px;
+    }
+    .admin-table th,
+    .admin-table td {
+        padding: 12px 10px;
+    }
+}
+@media (max-width: 768px) {
+    .admin-container {
+        padding: 20px 15px;
+    }
+    .admin-title {
+        font-size: 1.3rem;
+        gap: 8px;
+    }
+    .admin-subtitle {
+        font-size: 0.85rem;
+    }
+    .admin-form {
+        padding: 20px 15px;
+        border-radius: 8px;
+    }
+    .admin-form h2 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    .form-group input,
+    .form-group textarea {
+        padding: 13px 14px;
+        font-size: 0.9rem;
+    }
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .admin-btn {
+        width: 100%;
+        padding: 13px;
+        font-size: 0.9rem;
+        justify-content: center;
+    }
+    .admin-search-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .search-input {
+        width: 100%;
+        padding: 13px 14px;
+        font-size: 0.9rem;
+    }
+    .btn-search {
+        width: 100%;
+        justify-content: center;
+    }
+    .admin-table-wrapper {
+        border-radius: 8px;
+        overflow-x: auto; 
+    }
+    .admin-table thead {
+        display: none; 
+    }
+    .admin-table tbody tr {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border-radius: 12px;
+        margin-bottom: 15px;
+        padding: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        border: 1px solid #eee;
+        position: relative;
+    }
+    .admin-table tbody tr:hover {
+        background: #fafafa;
+    }
+    .admin-table td {
+        padding: 5px 0;
+        border-bottom: none;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .admin-table td:nth-child(1)::before { content: "ID: ";       font-weight: 600; color: #888; font-size: 0.8rem; }
+    .admin-table td:nth-child(2)::before { content: "Ảnh: ";      font-weight: 600; color: #888; font-size: 0.8rem; }
+    .admin-table td:nth-child(3)::before { content: "Tên: ";      font-weight: 600; color: #888; font-size: 0.8rem; }
+    .admin-table td:nth-child(4)::before { content: "Giá: ";      font-weight: 600; color: #888; font-size: 0.8rem; }
+    .admin-table td:nth-child(5)::before { content: "Thao tác: "; font-weight: 600; color: #888; font-size: 0.8rem; }
+    .admin-table td:nth-child(2) img,
+    .admin-table .admin-thumb {
+        width: 55px;
+        height: 55px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+    .admin-table .admin-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #333;
+    }
+    .admin-table .admin-price {
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+    .admin-table td:nth-child(5) {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding-top: 10px;
+        margin-top: 5px;
+        border-top: 1px solid #f0f0f0;
+    }
+    .action-btn {
+        flex: 1;
+        padding: 10px 12px;
+        font-size: 0.85rem;
+        border-radius: 8px;
+        justify-content: center;
+        margin-right: 0;
+    }
+}
+@media (max-width: 480px) {
+    .admin-container {
+        padding: 15px 12px;
+    }
+    .admin-title {
+        font-size: 1.1rem;
+    }
+    .admin-form {
+        padding: 15px 12px;
+    }
+    .form-group input,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 0.875rem;
+    }
+    .admin-table tbody tr {
+        padding: 12px;
+    }
+    .action-btn {
+        padding: 9px 10px;
+        font-size: 0.8rem;
+    }
 }
