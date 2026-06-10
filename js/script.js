@@ -13,14 +13,14 @@ const defaultProducts = [
     { id: 11, title: "The Little Oasis", price: 459000, image: "assets/images/product11.jpg", description: "Một ốc đảo xanh mát đầy tinh tế, mang đến vẻ đẹp thư thái cho không gian làm việc của bạn." },
     { id: 12, title: "Desert Mini-Scape", price: 329000, image: "assets/images/product12.jpg", description: "Góc sa mạc thu nhỏ cá tính với sự kết hợp hài hòa giữa xương rồng, sen đá và những viên đá tự nhiên." }
 ];
-// lay du lieu san pham tu localStorage, neu chua co thi dung defaultProducts
-let productData = JSON.parse(localStorage.getItem('plantlab_products')) || defaultProducts;
-// lay gio hang da luu, neu chua co thi de mang rong
-let cart = JSON.parse(localStorage.getItem('plantlab_cart')) || [];
-// neu la lan dau vao trang thi luu san pham vao localStorage
+// khoi tao du lieu san pham, luu vao localStorage neu chua co
 if (!localStorage.getItem('plantlab_products')) {
     localStorage.setItem('plantlab_products', JSON.stringify(defaultProducts));
 }
+// lay du lieu san pham tu localStorage
+let productData = JSON.parse(localStorage.getItem('plantlab_products'));
+// lay gio hang da luu, neu chua co thi de mang rong
+let cart = JSON.parse(localStorage.getItem('plantlab_cart')) || [];
 // sua lai duong dan anh cho dung vi tri 
 function suaAnh(imgPath) {
     if (!imgPath) return '';
@@ -168,16 +168,24 @@ function khoiTaoTimKiem() {
 function locSanPham(keyword) {
     let value = keyword.toLowerCase().trim();
     let cards = document.querySelectorAll(".all-products .product-card, .featured-container .product-card");
+    let coKetQua = false;
+
     cards.forEach(card => {
         let name = card.getAttribute("data-name") || "";
         let title = card.querySelector("h3") ? card.querySelector("h3").innerText : "";
-
         if (name.toLowerCase().includes(value) || title.toLowerCase().includes(value)) {
             card.style.display = "block";
+            coKetQua = true;
         } else {
             card.style.display = "none";
         }
     });
+
+    // hien thi thong bao neu khong tim thay san pham
+    let noResult = document.getElementById('noResult');
+    if (noResult) {
+        noResult.style.display = coKetQua ? "none" : "block";
+    }
 }
 function khoiTaoYeuThich() {
     let btn = document.getElementById('wishlistIconBtn');
@@ -400,6 +408,33 @@ function renderPublicProducts() {
     grid.innerHTML = html;
     scrollAnimation();
 }
+// ve lai 4 san pham noi bat o trang chu
+function renderFeaturedProducts() {
+    let grid = document.getElementById('featuredProductsGrid');
+    if (!grid) return;
+    let html = '';
+    productData.slice(0, 4).forEach(prod => {
+        html += `
+            <div class="product-card" data-name="${prod.title.toLowerCase()}">
+                <div class="product-image">
+                    <img src="${suaAnh(prod.image)}" alt="${prod.title}">
+                </div>
+                <div class="product-content">
+                    <h3>${prod.title}</h3>
+                    <p class="product-price">${prod.price.toLocaleString('vi-VN')}đ</p>
+                    <div class="product-actions">
+                        <a href="./html/chi-tiet.html?product=${prod.id}" class="product-btn">Xem chi tiết</a>
+                        <button class="add-to-cart-btn" data-id="${prod.id}" aria-label="Thêm vào giỏ hàng">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+    grid.innerHTML = html;
+    scrollAnimation();
+}
 // bang san pham trong trang quan tri admin
 function renderAdminTable() {
     let tbody = document.getElementById('adminProductTableBody');
@@ -525,7 +560,16 @@ document.addEventListener('DOMContentLoaded', () => {
     hienChiTietSP();
     xuLyFormLienHe();
     themNhanhVaoGio();
-    
+    // render san pham trang chu
+    if (document.getElementById('featuredProductsGrid')) {
+        renderFeaturedProducts();
+    }
+    // render san pham trang san pham (khong chay o trang chi tiet)
+    if (document.getElementById('productGrid') &&
+        !window.location.pathname.includes('chi-tiet')) {
+        renderPublicProducts();
+    }
+    // render bang san pham trang admin
     if (document.getElementById('adminProductTableBody')) {
         renderAdminTable();
     }

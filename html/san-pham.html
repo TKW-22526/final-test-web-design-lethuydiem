@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khám phá bộ sưu tập terrarium và hệ sinh thái mini của PlantLab — handmade, dễ chăm sóc, phù hợp mọi không gian.">
     <title>Sản phẩm | PlantLab</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,224 +25,45 @@
             <a href="san-pham.html" class="active">Sản phẩm</a>
             <a href="lien-he.html">Liên hệ</a>
         </nav>
-        <div class="header-right">         
+        <div class="header-right">
+            <div class="search-container">
+                <input type="text" id="headerSearchInput" placeholder="Tìm sản phẩm..." class="header-search-input">
+                <button aria-label="Tìm kiếm" class="icon-btn" id="searchIconBtn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
             <button aria-label="Giỏ hàng" class="icon-btn" id="cartIconBtn">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span id="cartBadge" class="cart-badge">0</span>
             </button>
         </div>
     </header>
-    <!-- Dau trang san pham -->
-    <section class="product-hero">
-        <div class="product-overlay">
-            <span>OUR PRODUCTS</span>
-            <h1>Explore PlantLab Terrarium Collection</h1>
-        </div>
-    </section>
-    <!-- Tim kiem -->
-    <section class="product-search-section">
-        <div class="search-box">
-            <input type="text" id="mainProductSearch" placeholder="Tìm kiếm sản phẩm..." class="search-input">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-    </section>
-    <!-- San pham -->
-    <section class="all-products">
-        <div class="featured-container" id="productGrid">
-            <!-- Product 1 -->
-            <div class="product-card" data-name="emerald glass">
-                <div class="product-image">
-                    <img src="../assets/images/product1.jpg" alt="Emerald Glass">
-                </div>
-                <div class="product-content">
-                    <h3>Emerald Glass</h3>
-                    <p class="product-price">299.000đ</p>
-                    <div class="product-actions">
-                        <a href="chi-tiet.html?product=1" class="product-btn">Xem chi tiết</a>
-                        <button class="add-to-cart-btn" data-id="1" aria-label="Thêm vào giỏ hàng">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
+
+    <main>
+        <!-- Dau trang san pham -->
+        <section class="product-hero">
+            <div class="product-overlay">
+                <span>OUR PRODUCTS</span>
+                <h1>Explore PlantLab Terrarium Collection</h1>
             </div>
-            <!-- Product 2 -->
-            <div class="product-card" data-name="moss planet">
-                <div class="product-image">
-                    <img src="../assets/images/product2.jpg" alt="Moss Planet">
-                </div>
-                <div class="product-content">
-                    <h3>Moss Planet</h3>
-                    <p class="product-price">259.000đ</p>
-                    <div class="product-actions">
-                        <a href="chi-tiet.html?product=2" class="product-btn">Xem chi tiết</a>
-                        <button class="add-to-cart-btn" data-id="2" aria-label="Thêm vào giỏ hàng">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
+        </section>
+        <!-- Tim kiem -->
+        <section class="product-search-section">
+            <div class="search-box">
+                <input type="text" id="mainProductSearch" placeholder="Tìm kiếm sản phẩm..." class="search-input" aria-label="Tìm kiếm sản phẩm">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <!-- Product 3 -->
-            <div class="product-card" data-name="desert bowl">
-                <div class="product-image">
-                    <img src="../assets/images/product3.jpg" alt="Desert Bowl">
-                </div>
-                <div class="product-content">
-                    <h3>Desert Bowl</h3>
-                    <p class="product-price">349.000đ</p>
-                    <div class="product-actions">
-                        <a href="chi-tiet.html?product=3" class="product-btn">Xem chi tiết</a>
-                        <button class="add-to-cart-btn" data-id="3" aria-label="Thêm vào giỏ hàng">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
+        </section>
+        <!-- San pham -->
+        <section class="all-products">
+            <div class="featured-container" id="productGrid">
+                <!-- Sản phẩm được tạo bằng JavaScript -->
             </div>
-            <!-- Product 4 -->
-            <div class="product-card" data-name="nature orb">
-                <div class="product-image">
-                    <img src="../assets/images/product4.jpg" alt="Nature Orb">
-                </div>
-                <div class="product-content">
-                    <h3>Nature Orb</h3>
-                    <p class="product-price">399.000đ</p>
-                    <div class="product-actions">
-                        <a href="chi-tiet.html?product=4" class="product-btn">Xem chi tiết</a>
-                        <button class="add-to-cart-btn" data-id="4" aria-label="Thêm vào giỏ hàng">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 5 -->
-            <div class="product-card" data-name="green habitat">
-                <div class="product-image">
-                    <img src="../assets/images/product5.jpg" alt="Green Habitat">
-                </div>
-                <div class="product-content">
-                    <h3>Green Habitat</h3>
-                    <p class="product-price">279.000đ</p>
-                    <div class="product-actions">
-                        <a href="chi-tiet.html?product=5" class="product-btn">Xem chi tiết</a>
-                        <button class="add-to-cart-btn" data-id="5" aria-label="Thêm vào giỏ hàng">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 6 -->
-            <div class="product-card" data-name="mini forest">
-                <div class="product-image">
-                    <img src="../assets/images/product6.jpg" alt="Mini Forest">
-                </div>
-                <div class="product-content">
-                    <h3>Mini Forest</h3>
-                    <p class="product-price">319.000đ</p>
-                    <div class="product-actions">
-                        <a href="chi-tiet.html?product=6" class="product-btn">Xem chi tiết</a>
-                        <button class="add-to-cart-btn" data-id="6" aria-label="Thêm vào giỏ hàng">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 7 -->
-            <div class="product-card" data-name="crystal moss">
-                <div class="product-image">
-                    <img src="../assets/images/product7.jpg" alt="Crystal Moss">
-                </div>
-                <div class="product-content">
-                    <h3>Crystal Moss</h3>
-                    <p class="product-price">289.000đ</p>
-                    <div class="product-actions">
-                        <a href="chi-tiet.html?product=7" class="product-btn">Xem chi tiết</a>
-                        <button class="add-to-cart-btn" data-id="7" aria-label="Thêm vào giỏ hàng">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 8 -->
-            <div class="product-card" data-name="zen garden">
-                <div class="product-image">
-                    <img src="../assets/images/product8.jpg" alt="Zen Garden">
-                </div>
-                <div class="product-content">
-                    <h3>Zen Garden</h3>
-                    <p class="product-price">369.000đ</p>
-                    <div class="product-actions">
-                        <a href="chi-tiet.html?product=8" class="product-btn">Xem chi tiết</a>
-                        <button class="add-to-cart-btn" data-id="8" aria-label="Thêm vào giỏ hàng">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 9 -->
-            <div class="product-card" data-name="little bunny garden">
-                <div class="product-image">
-                    <img src="../assets/images/product9.jpg" alt="Little Bunny Garden">
-                </div>
-                <div class="product-content">
-                    <h3>Little Bunny Garden</h3>
-                    <p class="product-price">2.470.000đ</p>
-                    <div class="product-actions">
-                        <a href="chi-tiet.html?product=9" class="product-btn">Xem chi tiết</a>
-                        <button class="add-to-cart-btn" data-id="9" aria-label="Thêm vào giỏ hàng">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 10 -->
-            <div class="product-card" data-name="snowy succulent jar">
-                <div class="product-image">
-                    <img src="../assets/images/product10.jpg" alt="Snowy Succulent Jar">
-                </div>
-                <div class="product-content">
-                    <h3>Snowy Succulent Jar</h3>
-                    <p class="product-price">269.000đ</p>
-                    <div class="product-actions">
-                        <a href="chi-tiet.html?product=10" class="product-btn">Xem chi tiết</a>
-                        <button class="add-to-cart-btn" data-id="10" aria-label="Thêm vào giỏ hàng">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 11 -->
-            <div class="product-card" data-name="the little oasis">
-                <div class="product-image">
-                    <img src="../assets/images/product11.jpg" alt="The Little Oasis">
-                </div>
-                <div class="product-content">
-                    <h3>The Little Oasis</h3>
-                    <p class="product-price">459.000đ</p>
-                    <div class="product-actions">
-                        <a href="chi-tiet.html?product=11" class="product-btn">Xem chi tiết</a>
-                        <button class="add-to-cart-btn" data-id="11" aria-label="Thêm vào giỏ hàng">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- Product 12 -->
-            <div class="product-card" data-name="desert mini-scape">
-                <div class="product-image">
-                    <img src="../assets/images/product12.jpg" alt="Desert Mini-Scape">
-                </div>
-                <div class="product-content">
-                    <h3>Desert Mini-Scape</h3>
-                    <p class="product-price">329.000đ</p>
-                    <div class="product-actions">
-                        <a href="chi-tiet.html?product=12" class="product-btn">Xem chi tiết</a>
-                        <button class="add-to-cart-btn" data-id="12" aria-label="Thêm vào giỏ hàng">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <p class="no-result" id="noResult" style="display:none;">
+                Không tìm thấy sản phẩm phù hợp.
+            </p>
+        </section>
+    </main>
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-container">
@@ -265,8 +87,8 @@
             <div class="footer-contact">
                 <h3>Contact</h3>
                 <p><i class="fa-solid fa-location-dot footer-icon"></i> Trà Vinh, Việt Nam</p>
-                <p><i class="fa-solid fa-envelope footer-icon"></i> plantlab@gmail.com</p>
-                <p><i class="fa-solid fa-phone footer-icon"></i> 0123 456 789</p>
+                <p><i class="fa-solid fa-envelope footer-icon"></i> <a href="mailto:plantlab@gmail.com">plantlab@gmail.com</a></p>
+                <p><i class="fa-solid fa-phone footer-icon"></i> <a href="tel:+840123456789">0123 456 789</a></p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -285,11 +107,11 @@
                 <span>Tổng tiền:</span>
                 <span id="cartSubtotal">0đ</span>
             </div>
-            <button class="checkout-btn">Tiến hành thanh toán</button>
+            <button class="checkout-btn" id="checkoutBtn">Tiến hành thanh toán</button>
         </div>
     </div>
     <div class="cart-overlay-bg" id="cartOverlayBg"></div>
     <div class="toast-container" id="toastContainer"></div>
-    <script src="../js/script.js"></script>
+    <script src="../js/script.js" defer></script>
 </body>
 </html>
