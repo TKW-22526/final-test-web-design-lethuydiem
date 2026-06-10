@@ -1421,6 +1421,14 @@ a {
 .no-products-message p {
     font-size: 1.1rem;
 }
+/* no result */
+.no-result {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+    font-size: 16px;
+    grid-column: 1 / -1;
+}
 /* MEDIA */
 @media(max-width: 992px) {
     .hero {
@@ -1449,6 +1457,10 @@ a {
     .detail-section {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+    /* Huy sticky tren tablet va mobile de anh cuon binh thuong */
+    .detail-image-box {
+        position: static;
     }
     .detail-image-box img {
         max-height: 450px;
@@ -1872,10 +1884,10 @@ a {
     }
     .admin-table-wrapper {
         border-radius: 8px;
-        overflow-x: auto; 
+        overflow-x: auto;
     }
     .admin-table thead {
-        display: none; 
+        display: none;
     }
     .admin-table tbody tr {
         display: flex;

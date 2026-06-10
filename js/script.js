@@ -1,4 +1,4 @@
-// du lieu san pham mac dinh cua trang web
+// du lieu san pham mac dinh
 const defaultProducts = [
     { id: 1, title: "Emerald Glass", price: 299000, image: "assets/images/product1.jpg", description: "Terrarium thủy tinh hiện đại với rêu xanh tự nhiên mang lại cảm giác thư giãn cho không gian làm việc." },
     { id: 2, title: "Moss Planet", price: 259000, image: "assets/images/product2.jpg", description: "Thiết kế terrarium mini với hệ rêu xanh tối giản phù hợp cho góc học tập hiện đại." },
